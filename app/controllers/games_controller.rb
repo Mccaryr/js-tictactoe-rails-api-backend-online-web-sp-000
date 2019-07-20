@@ -14,6 +14,9 @@ class GamesController < ApplicationController
 
   def index
     @games = Game.all
+    respond_to do |f|
+      f.json {render json: @games}
+    end
   end
 
   private
