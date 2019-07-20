@@ -2,7 +2,7 @@ class GamesController < ApplicationController
 
   def create
     @game = Game.create(game_params)
-    if @game.save
+    
       respond_to do |f|
         f.json {render json: @game}
       end
