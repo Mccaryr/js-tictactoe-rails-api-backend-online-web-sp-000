@@ -1,25 +1,25 @@
 class GamesController < ApplicationController
 
-  def create 
+  def create
     @game = Game.create(game_params)
-  end 
+  end
 
-  def show 
+  def show
 
-  end 
+  end
 
-  def update 
+  def update
 
-  end 
+  end
 
-  def index 
-    @games = Game.all 
-  end 
+  def index
+    @games = Game.all
+  end
 
-  private 
+  private
 
-  def game_params 
+  def game_params
     params.require(:game).permit(:state)
-  end 
+  end
 
 end
